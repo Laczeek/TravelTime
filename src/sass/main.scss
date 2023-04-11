@@ -1,0 +1,698 @@
+@import './variables';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../sass/components';
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+	// font-family: 'Libre Baskerville', serif;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+.header {
+	.navigation {
+		position: absolute;
+		width: 100%;
+		z-index: 100;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: white;
+		&__contact {
+			padding: 1.5em 1.5em 0;
+			font-size: 1.2rem;
+			.fa-solid {
+				font-size: 1.4rem;
+				margin-right: 0.5em;
+				color: $primary;
+			}
+			&-phone {
+				a {
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+		.navbar-brand {
+			font-size: 1.6rem;
+			color: white;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-weight: bold;
+
+			.fa-regular {
+				font-size: 1.8rem;
+				margin-right: 0.3em;
+			}
+			.logo-span {
+				font-size: 1.5rem;
+				color: $primary;
+				font-family: 'Libre Baskerville', serif;
+			}
+		}
+		.navbar-toggler {
+			font-size: 2rem;
+		}
+		.navbar-nav {
+			.nav-item {
+				margin: 0 0.5em;
+			}
+			.nav-link {
+				width: fit-content;
+				position: relative;
+				color: white;
+			}
+			.active {
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					height: 2px;
+					width: 100%;
+					background-color: $primary;
+				}
+			}
+		}
+	}
+
+	.carousel-indicators {
+		button {
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			margin: 0 0.5em;
+		}
+	}
+	.carousel-item {
+		position: relative;
+		.carousel-content {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: left;
+			padding: 1em;
+			.carousel-text {
+				margin-bottom: 4em;
+				&__title {
+					font-size: 5rem;
+					font-weight: bold;
+				}
+				&__description {
+					font-size: 3rem;
+					font-family: 'Libre Baskerville', serif;
+					color: $header_title;
+				}
+				&__cities {
+					font-size: 1.4rem;
+				}
+				.btn {
+					color: white;
+					padding: 1em 2em;
+					text-transform: uppercase;
+					font-weight: bold;
+				}
+			}
+		}
+
+		img {
+			display: block;
+			object-fit: cover;
+			object-position: center;
+			overflow: hidden;
+			height: 75vh;
+			width: 100%;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			content: '';
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+			width: 100vw;
+			height: 100vh;
+		}
+	}
+}
+
+.informations {
+	position: relative;
+	padding: 1em 0 10em;
+
+	background-color: #4782e7;
+	&__box {
+		margin: 2em 0;
+		column-gap: 1.5em;
+		&__text {
+			color: white;
+			&-title {
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 1.4rem;
+			}
+			&-description {
+				font-size: 1.2rem;
+				opacity: 0.6;
+			}
+		}
+	}
+	.booking {
+		position: absolute;
+		padding: 2em 1em;
+		background-color: white;
+		bottom: -8em;
+		width: 100%;
+		max-width: 90%;
+		left: 50%;
+		border-radius: 5px;
+		transform: translateX(-50%);
+		&__box {
+			margin-bottom: 1em;
+			label {
+				margin-bottom: 0.5em;
+				margin-left: 1em;
+				color: $secondary;
+			}
+			select,
+			input {
+				font-size: 1.4rem;
+				border: none;
+				background-color: #f9f9f8;
+				padding: 0.5em;
+				border-radius: 5px;
+				width: 100%;
+			}
+		}
+		&__btn {
+			text-align: right;
+			.btn {
+				@include button;
+			}
+		}
+	}
+}
+
+.places {
+	&__box {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(8, 120px);
+
+		&__text {
+			grid-column: 1/3;
+			grid-row: 1/5;
+			margin-top: 9em;
+			padding: 1em;
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: left;
+			border-radius: 5px;
+
+			&-link {
+				text-decoration: none;
+			}
+		}
+
+		&__img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			&--first {
+				display: none;
+			}
+			&--second {
+				grid-column: 1/2;
+				grid-row: 5/8;
+			}
+			&--third {
+				display: none;
+			}
+		}
+	}
+}
+
+.tours {
+	padding-bottom: 2em;
+	&-description {
+		text-align: center;
+	}
+	.row {
+		gap: 1em;
+	}
+	&__card {
+		overflow: hidden;
+		background-color: white;
+		padding: 0;
+		width: 100%;
+
+		&:hover img {
+			transform: scale(1.1);
+		}
+		&__img {
+			width: 50%;
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: transform 0.3s;
+			}
+		}
+		&__content {
+			z-index: 10;
+			background-color: white;
+			width: 50%;
+			padding: 1em;
+			&-title {
+				font-weight: bold;
+			}
+			&__info {
+				color: $secondary;
+				font-size: 1.4rem;
+				.fa-regular {
+					margin-right: 0.5em;
+				}
+				&-price {
+					color: $primary;
+				}
+			}
+			button {
+				display: block;
+				margin: 1em auto 0;
+				@include button;
+				color: $primary;
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+	&__btnMore {
+		@include button;
+		display: block;
+		width: fit-content;
+		margin: 4em auto;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.feedback {
+	position: relative;
+	background-image: url('/dist/img/feedbackSmall.jpeg');
+	background-position: center;
+	background-size: cover;
+	z-index: 10;
+	color: white;
+	padding: 4em 0 6em;
+
+	.description {
+		text-align: center;
+		color: white;
+		margin-bottom: 2em;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -10;
+	}
+
+	&__elements {
+		&__element {
+			width: 100%;
+			background-color: white;
+			padding: 1em;
+			margin: 0 0.5em;
+			border-bottom-right-radius: 25px;
+			border-top-left-radius: 25px;
+			&__box {
+				width: 30%;
+				&-img {
+					width: 100%;
+					img {
+						display: block;
+						margin: 0 auto;
+						width: 60px;
+						height: 60px;
+						object-fit: cover;
+						border-radius: 50%;
+					}
+				}
+				&-text {
+					margin-top: 1em;
+					font-family: 'Libre Baskerville', serif;
+					font-size: 1.4rem;
+					color: black;
+				}
+			}
+			&__content {
+				width: 70%;
+				color: $secondary;
+				font-size: 1.2rem;
+				margin-left: 0.5em;
+				.fa-solid {
+					font-size: 2rem;
+					color: $primary;
+				}
+				p {
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+}
+.blog {
+	padding: 6em 1em;
+	&__box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 1em;
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+
+		&__cardText,
+		&__card {
+			max-width: 280px;
+		}
+
+		&__cardText {
+			&-title {
+				font-size: 2rem;
+				font-weight: bold;
+			}
+			&-content {
+				font-size: 1.4rem;
+				color: $secondary;
+			}
+		}
+		&__card {
+			img {
+				object-fit: cover;
+				height: 200px;
+			}
+			background-color: white;
+			.card-body {
+				padding: 1em;
+				max-height: 200px;
+			}
+			.card-title {
+				font-size: 1.8rem;
+				margin: 1em 0;
+			}
+			.card-text {
+				margin: 1em 0;
+				font-size: 1.4rem;
+				color: $secondary;
+			}
+			.card-rating {
+				color: $primary;
+				.fa-regular {
+					padding-right: 0.3em;
+				}
+			}
+			transition: transform 0.3s;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+		& a:nth-child(even) {
+			img {
+				height: 300px;
+			}
+		}
+	}
+}
+
+.footer {
+	position: relative;
+	background-image: url('/dist/img/footerbgSmall.jpeg');
+	background-position: center;
+	background-size: cover;
+	color: white;
+	z-index: 0;
+	padding: 2em 0;
+	text-align: center;
+	&-text {
+		font-size: 1.2rem;
+	}
+	&__inputBox {
+		margin: 4em 0;
+		input {
+			padding: 0.3em;
+			border: none;
+			&::placeholder {
+				font-size: 1.2rem;
+			}
+		}
+		button {
+			background-color: $primary;
+			border: none;
+			color: white;
+			font-size: 1.2rem;
+			padding: 0.5em 2em;
+		}
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #4982ebaf;
+		z-index: -10;
+	}
+	&__info {
+		text-align: center;
+		&__links {
+			margin-bottom: 1em;
+			a {
+				margin: 0 0.5em;
+				text-decoration: none;
+				color: white;
+			}
+		}
+	
+	}
+	&__socials {
+		margin-top: 2em;
+		.fa-brands {
+			margin-right: 0.3em;
+			font-size: 2rem;
+		}
+	}
+}
+
+// MEDIA QUERIES
+
+@media (min-width: 768px) {
+	.header {
+		.navigation {
+			background-color: rgba(0, 0, 0, 0.55);
+			&__contact {
+				padding: 2em 3em 0;
+			}
+		}
+		.carousel-item {
+			.carousel-content {
+				.carousel-text {
+					margin-left: 4em;
+					margin-bottom: 7em;
+
+					&__description {
+						font-size: 3.3rem;
+					}
+				}
+			}
+		}
+	}
+
+	.informations {
+		padding: 1em 0 5em;
+		.booking {
+			max-width: 80%;
+			bottom: -4em;
+
+			&__box {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.places {
+		&__box {
+			gap: 1em;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(7, 100px);
+
+			&__text {
+				padding: 1em 2em;
+				margin-top: 0;
+				grid-column: 1/3;
+				grid-row: 3/6;
+				height: 100%;
+			}
+
+			&__img {
+				&--first {
+					display: block;
+					grid-column: 3/5;
+					grid-row: 2/4;
+				}
+				&--second {
+					grid-column: 3/5;
+					grid-row: 4/7;
+				}
+			}
+		}
+	}
+
+	.tours {
+		&__card {
+			width: 48%;
+		}
+	}
+	.footer {
+		.phone {
+			margin-right: 1em;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.feedback {
+		background-image: url('/dist/img/feedbackLarge.jpeg');
+	}
+	.blog {
+		&__box {
+			gap: 2.5em;
+			&__cardText {
+				&-title {
+					font-size: 2.5rem;
+				}
+				&-content {
+					font-size: 1.6rem;
+				}
+			}
+			&__cardText,
+			&__card {
+				max-width: 300px;
+			}
+		}
+	}
+	.footer {
+		background-image: url('/dist/img/footerbgLarge.jpeg');
+	}
+}
+
+@media (min-width: 1200px) {
+	.header {
+		.carousel-item {
+			.carousel-content {
+				.carousel-text {
+					&__title {
+						font-size: 6rem;
+					}
+					&__description {
+						font-size: 4rem;
+					}
+					&__cities {
+						font-size: 1.6rem;
+					}
+				}
+			}
+		}
+	}
+	.informations {
+		.booking {
+			max-width: 70%;
+		}
+	}
+	.places {
+		&__box {
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(8, 100px);
+			gap: 1.5em;
+
+			&__text {
+				grid-column: 1/3;
+				grid-row: 4/7;
+			}
+
+			&__img {
+				&--first {
+					grid-column: 3/4;
+					grid-row: 3/5;
+				}
+				&--second {
+					grid-column: 3/4;
+					grid-row: 5/8;
+				}
+				&--third {
+					display: block;
+					grid-column: 4/6;
+					grid-row: 2/7;
+				}
+			}
+		}
+	}
+	.tours {
+		.row {
+			gap: 2em;
+		}
+		&__card {
+			&__img {
+				width: 60%;
+			}
+			&__content {
+				width: 40%;
+				padding: 2em;
+
+				&-title {
+					font-size: 2rem;
+				}
+				&__info {
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+	.feedback {
+		background-attachment: fixed;
+		&__elements {
+			&__element {
+				padding: 2em 1em;
+			}
+		}
+	}
+}

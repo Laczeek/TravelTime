@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>TravelTime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/95bb59977f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="navigation">
+            <div class="navigation__contact d-flex justify-content-between">
+                <p class="navigation__contact-phone"><i class="fa-solid fa-phone"></i><a href="tel:884396831">884 396
+                        831</a></p>
+                <p class="navigation__contact-email"><i class="fa-solid fa-envelope"></i>patryk.popiela01@gmail.com</p>
+            </div>
+            <div class="container-lg">
+                <nav class="navbar navbar-dark navbar-expand-md ">
+                    <div class="container-fluid pb-4 pt-2">
+                        <a class="navbar-brand" href="#"><i class="fa-regular fa-compass"></i><span
+                                class="logo-span">Travel</span>Time</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#places">Places</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#tours">Tour list</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#feedback">Opinions</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#blog">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contact</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active ">
+                    <div class="carousel-content container">
+                        <div class="carousel-text">
+                            <p class="carousel-text__title mb-0">Special</p>
+                            <p class="carousel-text__description">7 Days in Japan</p>
+                            <p class="carousel-text__cities">Tokyo, Yokohama, Osaka, Nagoya, Sapporo</p>
+                            <a href="#" class="btn btn-primary">read more</a>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="./dist/img/japanDesktop.jpeg" media="(min-width: 992px)" />
+                        <img src="/dist/img/japanMobile.jpeg"
+                            alt="Old japanese building on the background of a mountain" />
+                    </picture>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content container ">
+                        <div class="carousel-text">
+                            <p class="carousel-text__title mb-0">Special</p>
+                            <p class="carousel-text__description">7 Days in Norway</p>
+                            <p class="carousel-text__cities">Oslo, Bergen, Trondheim, Stavanger, Drammen</p>
+                            <a href="#" class="btn btn-primary">read more</a>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="./dist/img/trainDesktop.jpeg" media="(min-width: 992px)" />
+                        <img src="/dist/img/trainMobile.jpeg" alt="Train in forest" />
+                    </picture>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content container ">
+                        <div class="carousel-text">
+                            <p class="carousel-text__title mb-0">Special</p>
+                            <p class="carousel-text__description">7 Days in USA</p>
+                            <p class="carousel-text__cities">New York, Chicago, Boston, Arizona</p>
+                            <a href="#" class="btn btn-primary">read more</a>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="./dist/img/desertDesktop.jpeg" media="(min-width: 992px)" />
+                        <img src="/dist/img/desertMobile.jpeg" alt="Desert with road" />
+                    </picture>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="informations">
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-sm-12 col-md-6 col-lg-3 informations__box d-flex justify-content-center align-items-center">
+                        <div class="informations__box-icon">
+                            <img src="/dist/img/icons/planeImg.png" alt="Plane">
+                        </div>
+                        <div class="informations__box__text">
+                            <p class="informations__box__text-title">400+ destinations</p>
+                            <p class="informations__box__text-description ">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="col-sm-12 col-md-6 col-lg-3 informations__box d-flex justify-content-center align-items-center">
+                        <div class=" informations__box-icon">
+                            <img src="/dist/img/icons/cashImg.png" alt="Cash">
+                        </div>
+                        <div class="informations__box__text">
+                            <p class="informations__box__text-title">best price guarantee</p>
+                            <p class="informations__box__text-description">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="col-sm-12 col-md-6 col-lg-3 informations__box d-flex justify-content-center align-items-center">
+                        <div class="informations__box-icon">
+                            <img src="/dist/img/icons/customerImg.png" alt="Customer">
+                        </div>
+                        <div class="informations__box__text">
+                            <p class="informations__box__text-title">great customer</p>
+                            <p class="informations__box__text-description">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="col-sm-12 col-md-6 col-lg-3 informations__box d-flex justify-content-center align-items-center">
+                        <div class="informations__box-icon">
+                            <img src="/dist/img/icons/calendarBlue.png" alt="Calendar">
+                        </div>
+                        <div class="informations__box__text">
+                            <p class="informations__box__text-title">fast booking</p>
+                            <p class="informations__box__text-description">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="booking container">
+                <form>
+                    <div class="row">
+                        <div class="booking__box d-flex flex-column col-sm-12 col-md-3">
+                            <label for="destination">Destination</label>
+                            <select class="form-select" id="destination">
+                                <option selected>Select location</option>
+                                <option value="1">Tokyo</option>
+                                <option value="2">Oslo</option>
+                                <option value="3">New York</option>
+                            </select>
+                        </div>
+                        <div class="booking__box d-flex flex-column col-6 col-md-3">
+                            <label for="in-date">Check in Date</label>
+                            <input type="date" id="in-date" placeholder="yyyy-mm-dd">
+                        </div>
+                        <div class="booking__box d-flex flex-column col-6 col-md-3">
+                            <label for="out-date">Check out Date</label>
+                            <input type="date" id="out-date" placeholder="yyyy-mm-dd">
+                        </div>
+                        <div class="booking__btn col-sm-12 col-md-3 d-flex justify-content-center align-items-center">
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+        <section class="places whiteSection" id="places">
+
+            <div class="container places__box">
+                <div class="places__box__text">
+                    <h2 class="places__box__text-title title">Most Beatiful Places Of The World</h2>
+                    <p class="places__box__text-description description">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.
+                        Eaque natus explicabo facilis necessitatibus tenetur odio.</p>
+                    <a href="#" class="places__box__text-link">See more →</a>
+                </div>
+
+                <img src="/dist/img/mountainLong.jpeg" alt="" class="places__box__img places__box__img--first">
+
+
+                <img src="/dist/img/cityNormal.jpeg" alt="" class="places__box__img places__box__img--second">
+
+
+                <img src="/dist/img/islandLong.jpeg" alt="" class="places__box__img places__box__img--third">
+
+            </div>
+
+        </section>
+
+        <section class="tours whiteSection" id="tours">
+            <div class="container">
+                <h2 class="title ">Most Popular Tours</h2>
+                <p class="description tours-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia
+                    eveniet tempore
+                    blanditiis quae ullam eum!</p>
+                <div class="row justify-content-center mt-5">
+                    <div class="tours__card d-flex  col-12 col-md-6 col-lg-3">
+                        <div class="tours__card__img">
+                            <img src="/dist/img/singapur.jpeg" alt="Big neon trees">
+                        </div>
+                        <div class="tours__card__content d-flex flex-column justify-content-center">
+                            <p class="tours__card__content-title">Singapur City, <br>Singapur</p>
+                            <div class="tours__card__content__info d-flex justify-content-between">
+                                <p><i class="fa-regular fa-clock"></i>8 Days</p>
+                                <p>From</p>
+                            </div>
+                            <div class="tours__card__content__info d-flex justify-content-between">
+                                <p><i class="fa-regular fa-user"></i>2 Person</p>
+                                <p class="tours__card__content__info-price">$1000</p>
+                            </div>
+                            <button class="btn btn-outline-primary tours__card__content-title">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="tours__card d-flex col-12 col-md-6 col-lg-3">
+                        <div class="tours__card__img">
+                            <img src="/dist/img/sidney.jpeg" alt="The most recognizable building in Sydney">
+                        </div>
+                        <div class="tours__card__content d-flex flex-column justify-content-center">
+                            <p class="tours__card__content-title">Opera House, Sydney<br>Australia</p>
+                            <div class="tours__card__content__info d-flex justify-content-between">
+                                <p><i class="fa-regular fa-clock"></i>8 Days</p>
+                                <p>From</p>
+                            </div>
+                            <div class="tours__card__content__info d-flex justify-content-between">
+                                <p><i class="fa-regular fa-user"></i>2 Person</p>
+                                <p class="tours__card__content__info-price">$800</p>
+                            </div>
+                            <button class="btn btn-outline-primary tours__card__content-title">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="tours__card d-flex col-12 col-md-6 col-lg-3">
+                        <div class="tours__card__img">
+                            <img src="/dist/img/mahal.jpeg" alt="Taj Mahal">
+                        </div>
+                        <div class="tours__card__content d-flex flex-column justify-content-center">
+                            <p class="tours__card__content-title">Taj Mahal, Agra<br>India</p>
+                            <div class="tours__card__content__info d-flex justify-content-between">
+                                <p><i class="fa-regular fa-clock"></i>8 Days</p>
+                                <p>From</p>
+                            </div>
+                            <div class="tours__card__content__info d-flex justify-content-between">
+                                <p><i class="fa-regular fa-user"></i>2 Person</p>
+                                <p class="tours__card__content__info-price">$500</p>
+                            </div>
+                            <button class="btn btn-outline-primary tours__card__content-title">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="tours__card d-flex col-12 col-md-6 col-lg-3">
+                        <div class="tours__card__img">
+                            <img src="/dist/img/tokyo.jpeg" alt="Street with neon signs">
+                        </div>
+                        <div class="tours__card__content d-flex flex-column justify-content-center">
+                            <p class="tours__card__content-title">Tokyo City, <br>Japan</p>
+                            <div class="tours__card__content__info d-flex justify-content-between">
+                                <p><i class="fa-regular fa-clock"></i>8 Days</p>
+                                <p>From</p>
+                            </div>
+                            <div class="tours__card__content__info d-flex justify-content-between">
+                                <p><i class="fa-regular fa-user"></i>2 Person</p>
+                                <p class="tours__card__content__info-price">$2000</p>
+                            </div>
+                            <button class="btn btn-outline-primary tours__card__content-title">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <a class="tours__btnMore btn btn-primary">See More</a>
+            </div>
+        </section>
+
+        <section class="feedback" id="feedback">
+            <div class="container">
+                <p class="title">What Clients Says?</p>
+                <p class="description feedback-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio, rem!</p>
+
+                <div class="feedback__elements">
+                    <div class="feedback__elements__element d-flex align-items-center">
+                        <div
+                            class="feedback__elements__element__box d-flex flex-column justify-content-center align-items-center">
+                            <div class="feedback__elements__element__box-img">
+                                <img src="/dist/img/faceOne.jpeg" alt="">
+                            </div>
+                            <div class="feedback__elements__element__box-text">
+                                <p>Oscar Jones</p>
+                            </div>
+                        </div>
+                        <div class="feedback__elements__element__content">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur voluptas
+                                maiores
+                                doloribus minima est ullam accusamus labore, minus veritatis.</p>
+                        </div>
+                    </div>
+                    <div class="feedback__elements__element d-flex align-items-center">
+                        <div
+                            class="feedback__elements__element__box d-flex flex-column justify-content-center align-items-center">
+                            <div class="feedback__elements__element__box-img">
+                                <img src="/dist/img/faceTwo.jpeg" alt="">
+                            </div>
+                            <div class="feedback__elements__element__box-text">
+                                <p>Kyle Taylor</p>
+                            </div>
+                        </div>
+                        <div class="feedback__elements__element__content">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur voluptas
+                                maiores
+                                doloribus minima est ullam accusamus labore, minus veritatis.</p>
+                        </div>
+                    </div>
+                    <div class="feedback__elements__element d-flex align-items-center">
+                        <div
+                            class="feedback__elements__element__box d-flex flex-column justify-content-center align-items-center">
+                            <div class="feedback__elements__element__box-img">
+                                <img src="/dist/img/faceThree.jpeg" alt="">
+                            </div>
+                            <div class="feedback__elements__element__box-text">
+                                <p>Charlie Brown</p>
+                            </div>
+                        </div>
+                        <div class="feedback__elements__element__content">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur voluptas
+                                maiores
+                                doloribus minima est ullam accusamus labore, minus veritatis.</p>
+                        </div>
+                    </div>
+                    <div class="feedback__elements__element d-flex align-items-center">
+                        <div
+                            class="feedback__elements__element__box d-flex flex-column justify-content-center align-items-center">
+                            <div class="feedback__elements__element__box-img">
+                                <img src="/dist/img/faceFour.jpeg" alt="">
+                            </div>
+                            <div class="feedback__elements__element__box-text">
+                                <p>Patrick Smith</p>
+                            </div>
+                        </div>
+                        <div class="feedback__elements__element__content">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur voluptas
+                                maiores
+                                doloribus minima est ullam accusamus labore, minus veritatis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="blog whiteSection" id="blog">
+            <div class="container">
+                <div class="blog__box">
+                    <div class="blog__box__cardText">
+                        <p class="blog__box__cardText-title">Latest Blog</p>
+                        <p class="blog__box__cardText-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Sunt dicta cupiditate saepe quibusdam consectetur corrupti unde consequuntur, iure
+                            laudantium optio?</p>
+                    </div>
+                    <a href="#" class="d-block">
+                        <div class="blog__box__card">
+                            <img src="/dist/img/howtotravel.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">How to travel?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Blanditiis,
+                                    modi!</p>
+                                <div class="card-rating d-flex justify-content-between">
+                                    <p><i class="fa-regular fa-share-from-square"></i></p>
+                                    <p><i class="fa-regular fa-heart"></i>12k</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="d-block">
+                        <div class="blog__box__card">
+                            <img src="/dist/img/mountains.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Mountain tips</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Blanditiis,
+                                    modi!</p>
+                                <div class="card-rating d-flex justify-content-between">
+                                    <p><i class="fa-regular fa-share-from-square"></i></p>
+                                    <p><i class="fa-regular fa-heart"></i>12k</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="d-block">
+                        <div class="blog__box__card">
+                            <img src="/dist/img/plane.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">How to overcome the fear?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Blanditiis,
+                                    modi!</p>
+                                <div class="card-rating d-flex justify-content-between">
+                                    <p><i class="fa-regular fa-share-from-square"></i></p>
+                                    <p><i class="fa-regular fa-heart"></i>12k</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="d-block">
+                        <div class="blog__box__card">
+                            <img src="/dist/img/tent.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">How to pitch a tent?</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Blanditiis,
+                                    modi!</p>
+                                <div class="card-rating d-flex justify-content-between">
+                                    <p><i class="fa-regular fa-share-from-square"></i></p>
+                                    <p><i class="fa-regular fa-heart"></i>12k</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="d-block">
+                        <div class="blog__box__card">
+                            <img src="/dist/img/packages.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Packing tips</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Blanditiis,
+                                    modi!</p>
+                                <div class="card-rating d-flex justify-content-between">
+                                    <p><i class="fa-regular fa-share-from-square"></i></p>
+                                    <p><i class="fa-regular fa-heart"></i>12k</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <p class="footer__title title">Get In Touch</p>
+            <p class="footer__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam rem explicabo non
+                labore culpa tempora.</p>
+            <div class="footer__inputBox d-flex justify-content-center">
+                <input type="text" placeholder="Enter Your Email Adress">
+                <button>Subscribe</button>
+            </div>
+            <div class="footer__info ">
+                <div class="footer__info__links">
+                    <a href="#">Home</a>
+                    <a href="#places">Places</a>
+                    <a href="#tours">Tour list</a>
+                    <a href="#blog">blog</a>
+                </div>
+                <div class="footer__info__contact">
+                    <p>Head office | st. Opolska 271, Opole, Polska</p>
+                    <div class="  d-md-flex justify-content-md-center ">
+                        <p class="phone">Phone | 884 396 831</p>
+                        <p>Email | patryk.popiela01@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__socials d-flex justify-content-between">
+                <p>Copyright <span class="footer__socials-date"></span> &copy;Travel Time</p>
+                <div>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/dist/js/index.min.js"></script>
+</body>
+
+</html>
