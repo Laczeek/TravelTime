@@ -317,7 +317,7 @@ body {
 
 .feedback {
 	position: relative;
-	background-image: url('../../dist/img/feedbackSmall.jpeg');
+	background-image: url('../img/feedbackSmall.jpeg');
 	background-position: center;
 	background-size: cover;
 	z-index: 10;
@@ -455,7 +455,7 @@ body {
 
 .footer {
 	position: relative;
-	background-image: url('../../dist/img/footerbgSmall.jpeg');
+	background-image: url('../img/footerbgSmall.jpeg');
 	background-position: center;
 	background-size: cover;
 	color: white;
@@ -503,7 +503,6 @@ body {
 				color: white;
 			}
 		}
-	
 	}
 	&__socials {
 		margin-top: 2em;
@@ -591,7 +590,7 @@ body {
 
 @media (min-width: 992px) {
 	.feedback {
-		background-image: url('../../dist/img/feedbackLarge.jpeg');
+		background-image: url('../img/feedbackLarge.jpeg');
 	}
 	.blog {
 		&__box {
@@ -611,7 +610,7 @@ body {
 		}
 	}
 	.footer {
-		background-image: url('../../dist/img/footerbgLarge.jpeg');
+		background-image: url('../img/footerbgLarge.jpeg');
 	}
 }
 
