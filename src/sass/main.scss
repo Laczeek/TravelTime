@@ -317,7 +317,7 @@ body {
 
 .feedback {
 	position: relative;
-	background-image: url('/dist/img/feedbackSmall.jpeg');
+	background-image: url('feedbackSmall.jpeg');
 	background-position: center;
 	background-size: cover;
 	z-index: 10;
@@ -455,7 +455,7 @@ body {
 
 .footer {
 	position: relative;
-	background-image: url('/dist/img/footerbgSmall.jpeg');
+	background-image: url('footerbgSmall.jpeg');
 	background-position: center;
 	background-size: cover;
 	color: white;
@@ -590,7 +590,7 @@ body {
 
 @media (min-width: 992px) {
 	.feedback {
-		background-image: url('/dist/img/feedbackLarge.jpeg');
+		background-image: url('feedbackLarge.jpeg');
 	}
 	.blog {
 		&__box {
@@ -610,7 +610,7 @@ body {
 		}
 	}
 	.footer {
-		background-image: url('/dist/img/footerbgLarge.jpeg');
+		background-image: url('footerbgLarge.jpeg');
 	}
 }
 
